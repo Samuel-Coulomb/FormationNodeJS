@@ -1,5 +1,0 @@
-Point virgule :
-
-- Non obligatoire : insertion automatique de ';', ils seront rajoutés auto. lors de l'exéc
-- Fin d'une instruction
-- 

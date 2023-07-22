@@ -15,6 +15,8 @@ app.get('/bonjour/:prenom/:nom', (req, res) => {
 });
 
 app.get('/articles/:id', (req, res) => {
+    console.log(req.params)
+    console.log(req.query)
     res.send(`Article #${req.params.id} du blog`)
 })
 
@@ -25,7 +27,7 @@ app.get('/fichier/html', (req, res) => {
     res.sendFile(path.join(__dirname, "views/page.html"));
 });
 
-app.listen(port, () => {
+app.listen(port, () => { 
     console.log(`Serveur lancé sur le port ${port}`);
     console.log(__dirname);
 });

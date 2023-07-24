@@ -14,10 +14,16 @@ app.get('/bonjour/:prenom/:nom', (req, res) => {
     res.send(text)
 });
 
+app.get('/bonjour', (req, res) => {
+    const text = `Bonjour ${req.query.prenom} ${req.query.nom}`
+    res.send(text)
+});
+
 app.get('/articles/:id', (req, res) => {
     console.log(req.params)
     console.log(req.query)
     res.send(`Article #${req.params.id} du blog`)
+    console.log(params.query)
 })
 
 app.get('/fichier/html', (req, res) => {

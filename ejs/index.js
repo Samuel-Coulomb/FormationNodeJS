@@ -9,7 +9,6 @@ const articles = [
     },
     {
         title: "Salut 2",
-        category:"C'est le salut 2",
     },
     {
         title: "Salut 3",
@@ -26,18 +25,18 @@ app.set('view engine', 'ejs');
 app.use('/static', express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('pages/home');
 });
 
 app.get('/hello/:name', (req, res) => {
     const data = {
         name: req.params.name,
     };
-    res.render('hello', data);
+    res.render('pages/hello', data);
 });
 
 app.get('/posts', (req, res) => {
-    res.render('posts-list', { posts: articles });
+    res.render('pages/posts-list', { posts: articles });
 });
 
 app.listen(port, () => {
